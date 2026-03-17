@@ -1,0 +1,80 @@
+baseURL = 'https://recursive.codes/'
+languageCode = 'en-us'
+title = 'recursive.codes'
+theme = 'LoveIt'
+
+[params]
+  defaultTheme = "auto"
+  dateformat = "2006-01-02"
+
+  [params.footer]
+    since = 2026
+    hugo = false
+    custom = '<div class="footer-social"><a href="https://github.com/recursivecodes" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/toddrsharp/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a><a href="https://x.com/recursivecodes" target="_blank" rel="noopener" title="X"><i class="fab fa-x-twitter"></i></a><a href="https://www.instagram.com/toddrsharp" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a><a href="https://www.twitch.tv/recursivecodes" target="_blank" rel="noopener" title="Twitch"><i class="fab fa-twitch"></i></a></div><style>.footer-social{display:flex;justify-content:center;gap:1rem;font-size:1.4rem;margin-bottom:0.5rem}.footer-social a{color:inherit;opacity:0.6;transition:opacity 0.2s}.footer-social a:hover{opacity:1}</style>'
+
+  [params.author]
+    name = "Todd Sharp"
+
+  [params.social]
+    GitHub = "recursivecodes"
+    Linkedin = "toddrsharp"
+    Twitter = "recursivecodes"
+    Instagram = "toddrsharp"
+    Twitch = "recursivecodes"
+
+  [params.header]
+    [params.header.title]
+      name = "recursive.codes"
+
+  [params.home]
+    [params.home.profile]
+      enable = true
+      subtitle = "A blog about code, cloud, and everything in between."
+    [params.home.posts]
+      enable = true
+      paginate = 10
+
+  [params.page]
+    [params.page.toc]
+      enable = true
+    [params.page.code]
+      copy = true
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  lineNos = false
+  style = "monokai"
+
+[taxonomies]
+  tag = "tags"
+
+[[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 2
+
+[[menu.main]]
+  identifier = "devto"
+  name = "Featured Articles"
+  url = "/devto/"
+  weight = 3
+
+[[menu.main]]
+  identifier = "videos"
+  name = "Videos"
+  url = "/videos/"
+  weight = 4
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

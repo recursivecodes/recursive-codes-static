@@ -1,0 +1,32 @@
+---
+title: "Microservices Are Easy…"
+slug: "microservices-are-easy"
+author: "Todd Sharp"
+date: 2019-06-28
+summary: "In theory, microservices are easy. The promise of loosely coupled, scalable services that can each be independently built, tested and deployed sounds amazing, doesn’t it?"
+tags: []
+keywords: "microservices, container"
+featuredimage: "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idatzojkinhi/b/img.recursive.codes/o/ff5b2209-af23-4349-9f26-588da613fcb1/banner_danka_peter_l0o1rfqupuy_unsplash.jpg"
+---
+
+In theory, microservices are easy. The promise of loosely coupled, scalable services that can each be independently built, tested and deployed sounds amazing, doesn't it? On top of that, each service can be written in whatever language the development deems appropriate -- using their framework of choice -- without any consequence to the rest of the architecture. Java services mixed with Node, Go, Ruby with each potentially persisting data to a different datastore. Maybe the Java service uses a key/value store. Perhaps the Go service persists to a traditional RDBMS. The future has truly arrived.
+
+## Until they're not
+
+In reality, microservices can present a new set of challenges for developers. Our industry seems to be a bit cyclical, re-inventing solutions to problems we solved 5 or 10 years ago. That's not necessarily a bad thing - crafting new answers to old problems lets us take advantage of the lessons we've learned over the years. The rise and proliferation of social media has led to the lines being slightly blurred between developer communities and ideas being shared across previously uncrossed boundaries. That being said, it's important to understand that microservices aren't an instant solution to your monolithic problems. They present a new way to solve old problems, but they come at a price. You'll have to change the way you think and break away from some concepts that you once thought of as "gold standards". Things like referential integrity using check constraints in your database might not apply anymore. The concept of Don't Repeat Yourself (DRY) -- one of the earliest concepts a programmer ever learns -- no longer seems so important. Everything comes with a cost, but this isn't unique to microservices. When Object Relational Mapping (ORM) frameworks became popular we lost some of the granular control that we had before them. Selectively loading a few properties of an object wasn't so easy anymore (you get the whole object, or nothing). Performing complex queries of our object graph with ORM is difficult and performance suffers due to the fact that most ORM systems utilize reflection and, if poorly coded, will run some potentially nasty database queries.
+
+Still, there's no questioning the popularity of microservices. Customers constantly ask about them -- probably more than any other topic in the last several years. Conferences are full of talks about them and blog posts and videos are published daily on the subject. So, I've decided to dedicate a series of blog posts to show you some interesting techniques for creating powerful, maintainable and performant microservices.
+
+It goes without saying that each project is different. What works for one project won't always work for another. What you did at your last company might not be the best thing for your current company. And that's OK. It's part of what makes this industry so exciting to work in. If each problem had an easy solution that could be applied to all others it would probably get pretty boring really quickly. Keep that in mind when reading this series and make sure you evaluate your business needs before choosing to move forward with any architecture.
+
+## Microservices Defined
+
+I shouldn't assume that you fully understand what I mean when I say "microservice" because although it sometimes feels like "everyone" knows about them, the reality is some developers still might not completely grasp the general concept. Traditionally, we designed our applications with what's now known as the "monolith" pattern; that is, a single application containing all services, business logic, model and usually the display code. You'll often read or hear that monoliths are somehow outdated, or no longer worthy of any place in "modern" software. That's simply not true -- there are certainly times that your application is best suited for a single codebase and you shouldn't feel like your solution is somehow inferior to another just because you've decided to build your application a certain way. But sometimes the application requirements are a little too complex for a single codebase. Maybe you have several, distributed teams with different skillsets. Or you have a service that is used a lot more frequently than the others. Perhaps the data lends itself to a different persistence model. In those circumstances (among others), developers have turned to the microservice pattern to reduce coupling and independently scale and manage services. Martin Fowler described microservices like so in [this article](https://martinfowler.com/articles/microservices.html) from 2014:
+
+*In short, the microservice architectural style is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API. These services are built around business capabilities and independently deployable by fully automated deployment machinery. There is a bare minimum of centralized management of these services, which may be written in different programming languages and use different data storage technologies.*
+
+## Easy, But Not Easy...
+
+As stated earlier - in theory, it's pretty simple. But it can be difficult to move from understanding the theory behind microservices to actually implementing them and things can get tricky when it comes time to manage your data. In this blog series, I want to show you how to create and deploy a small set of microservices -- from infrastructure to code and deployment. I'll also try to explain and demonstrate the different ways to manage data when implementing the microservice pattern.
+
+~Photo\ by [Danka\ &\ Peter](https://unsplash.com/@dankapeter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/mountain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)~
