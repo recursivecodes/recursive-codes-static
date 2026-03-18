@@ -140,6 +140,7 @@ layout: "single"
 <div class="video-section">
   <h2>Featured</h2>
   <p class="section-desc">Building a real-time interactive streaming experience with Amazon IVS.</p>
+  <!-- hi -->
   <div class="featured-video">
     <span class="featured-badge">★ Featured</span>
     <div class="video-wrapper">
