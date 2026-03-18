@@ -2,6 +2,12 @@
 {{ $img := "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idatzojkinhi/b/img.recursive.codes/o" }}
 <div class="about-page">
 
+  {{ with .Params.featuredimage }}
+  <div class="about-banner">
+    <img src="{{ . }}" alt="About banner">
+  </div>
+  {{ end }}
+
   <!-- ==================== TERMINAL SECTION ==================== -->
   <section class="terminal-section">
     <div class="terminal">
