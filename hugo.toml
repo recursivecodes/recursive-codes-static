@@ -29,7 +29,7 @@ theme = 'LoveIt'
   [params.home]
     [params.home.profile]
       enable = true
-      subtitle = "A blog about code, cloud, and everything in between."
+      subtitle = "The personal blog of Todd Sharp."
     [params.home.posts]
       enable = true
       paginate = 10
