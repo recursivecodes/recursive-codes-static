@@ -73,3 +73,10 @@ theme = 'LoveIt'
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+[params.search]
+  enable = true
+  type = "lunr"
+  contentLength = 4000
+  maxResultLength = 10
+  snippetLength = 300
