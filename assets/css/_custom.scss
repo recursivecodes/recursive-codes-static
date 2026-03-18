@@ -76,6 +76,15 @@
 [theme=dark] .pub-card { background: #272c34; }
 .pub-meta { color: #999; font-size: 0.8rem; }
 
+/* Photo Tabs */
+.photo-tabs { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 1rem; }
+.photo-tab { background: #272c34; color: #999; border: none; padding: 0.5rem 1rem; border-radius: 6px 6px 0 0; cursor: pointer; font-size: 0.85rem; transition: background 0.2s, color 0.2s; }
+.photo-tab.active { background: #111; color: #fff; }
+[theme=light] .photo-tab { background: #e8e8e8; }
+[theme=light] .photo-tab.active { background: #f5f5f5; color: #000; }
+.photo-panel { display: none; }
+.photo-panel.active { display: block; }
+
 /* Carousel */
 .carousel { position: relative; overflow: hidden; border-radius: 8px; margin: 1rem 0; }
 .carousel-track { display: flex; transition: transform 0.4s ease; }

@@ -119,97 +119,62 @@
   <!-- ==================== PHOTO CAROUSELS ==================== -->
   <section class="photos-section">
     <h2>📸 Life in Pictures</h2>
-
-    <h3>🎮 GDC 2026 — San Francisco</h3>
-    <div class="carousel">
-      <div class="carousel-track">
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-1.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-2.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-3.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-4.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-5.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-6.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-7.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-8.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-9.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-10.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-11.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-12.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-13.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-14.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-15.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-16.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-17.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-18.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-19.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-20.jpg" alt="GDC 2026" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-21.jpg" alt="GDC 2026" loading="lazy"></div>
-      </div>
-      <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
-      <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
+    <div class="photo-tabs">
+      <button class="photo-tab active" data-tab="gdc">🎮 GDC 2026</button>
+      <button class="photo-tab" data-tab="japan">🇯🇵 Japan</button>
+      <button class="photo-tab" data-tab="reinvent">🎰 re:Invent</button>
+      <button class="photo-tab" data-tab="gls">🕹️ GLS Arcade</button>
+      <button class="photo-tab" data-tab="booknook">🏠 Book Nooks</button>
     </div>
 
-    <h3>🇯🇵 Japan JAWS Tour — February 2026</h3>
-    <div class="carousel">
-      <div class="carousel-track">
-        <div class="carousel-slide"><img src="{{ $img }}/about-japan-1.jpg" alt="Japan" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-japan-2.jpg" alt="Japan" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-japan-3.jpg" alt="Japan" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-japan-4.jpg" alt="Japan" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-japan-5.jpg" alt="Japan" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-japan-6.jpg" alt="Japan" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-japan-7.jpg" alt="Japan" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-japan-8.jpg" alt="Japan" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-japan-9.jpg" alt="Japan" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-japan-10.jpg" alt="Japan" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-japan-11.jpg" alt="Japan" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-japan-12.jpg" alt="Japan" loading="lazy"></div>
+    <div class="photo-panel active" data-panel="gdc">
+      <div class="carousel">
+        <div class="carousel-track">
+          {{ range slice "1" "2" "3" "4" "6" "7" "10" "11" "12" "15" "20" "21" }}<div class="carousel-slide"><img src="{{ $img }}/about-gdc-{{ . }}.jpg" alt="GDC 2026" loading="lazy"></div>{{ end }}
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
       </div>
-      <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
-      <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
     </div>
 
-    <h3>🎰 re:Invent 2025 — Las Vegas</h3>
-    <div class="carousel">
-      <div class="carousel-track">
-        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-1.jpg" alt="re:Invent" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-2.jpg" alt="re:Invent" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-3.jpg" alt="re:Invent" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-4.jpg" alt="re:Invent" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-5.jpg" alt="re:Invent" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-6.jpg" alt="re:Invent" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-7.jpg" alt="re:Invent" loading="lazy"></div>
+    <div class="photo-panel" data-panel="japan">
+      <div class="carousel">
+        <div class="carousel-track">
+          {{ range slice "1" "2" "3" "4" "5" "6" "7" "9" "11" "12" }}<div class="carousel-slide"><img src="{{ $img }}/about-japan-{{ . }}.jpg" alt="Japan" loading="lazy"></div>{{ end }}
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
       </div>
-      <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
-      <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
     </div>
 
-    <h3>🕹️ GLS Arcade</h3>
-    <div class="carousel">
-      <div class="carousel-track">
-        <div class="carousel-slide"><img src="{{ $img }}/about-gls-1.jpg" alt="GLS Arcade" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gls-2.jpg" alt="GLS Arcade" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gls-3.jpg" alt="GLS Arcade" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-gls-4.jpg" alt="GLS Arcade" loading="lazy"></div>
+    <div class="photo-panel" data-panel="reinvent">
+      <div class="carousel">
+        <div class="carousel-track">
+          {{ range seq 7 }}<div class="carousel-slide"><img src="{{ $img }}/about-reinvent-{{ . }}.jpg" alt="re:Invent" loading="lazy"></div>{{ end }}
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
       </div>
-      <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
-      <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
     </div>
 
-    <h3>🏠 Book Nooks & Miniatures</h3>
-    <div class="carousel">
-      <div class="carousel-track">
-        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-1.jpg" alt="Book Nook" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-2.jpg" alt="Book Nook" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-3.jpg" alt="Book Nook" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-4.jpg" alt="Book Nook" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-5.jpg" alt="Book Nook" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-6.jpg" alt="Book Nook" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-7.jpg" alt="Book Nook" loading="lazy"></div>
-        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-8.jpg" alt="Book Nook" loading="lazy"></div>
+    <div class="photo-panel" data-panel="gls">
+      <div class="carousel">
+        <div class="carousel-track">
+          {{ range slice "2" "3" "4" }}<div class="carousel-slide"><img src="{{ $img }}/about-gls-{{ . }}.jpg" alt="GLS Arcade" loading="lazy"></div>{{ end }}
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
       </div>
-      <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
-      <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
+    </div>
+
+    <div class="photo-panel" data-panel="booknook">
+      <div class="carousel">
+        <div class="carousel-track">
+          {{ range seq 8 }}<div class="carousel-slide"><img src="{{ $img }}/about-booknook-{{ . }}.jpg" alt="Book Nook" loading="lazy"></div>{{ end }}
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
+      </div>
     </div>
   </section>
 
@@ -328,6 +293,16 @@
 </div>
 
 <script>
+// Tab switching
+document.querySelectorAll('.photo-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.photo-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.photo-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelector(`[data-panel="${tab.dataset.tab}"]`).classList.add('active');
+  });
+});
+
 // Carousel logic
 document.querySelectorAll('.carousel').forEach(c => {
   const track = c.querySelector('.carousel-track');
