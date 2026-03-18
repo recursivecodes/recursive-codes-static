@@ -34,7 +34,7 @@
         <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat tech_stack.txt</span></div>
         <div class="terminal-output">
           Java ☕ · JavaScript · TypeScript · Python 🐍 · C# · C/C++<br>
-          AWS (deep) · Oracle Cloud (deep) · GCP (light)<br>
+          AWS (expert) · Oracle Cloud (expert) · GCP (novice)<br>
           Raspberry Pi · Arduino · Microcontrollers · Nixie Tubes · IoT everything
         </div>
 
@@ -299,82 +299,82 @@
 </div>
 
 <script>
-// Tab switching
-document.querySelectorAll('.photo-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.photo-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.photo-panel').forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    document.querySelector(`[data-panel="${tab.dataset.tab}"]`).classList.add('active');
+  // Tab switching
+  document.querySelectorAll('.photo-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.photo-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.photo-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelector(`[data-panel="${tab.dataset.tab}"]`).classList.add('active');
+    });
   });
-});
 
-// Carousel logic
-document.querySelectorAll('.carousel').forEach(c => {
-  const track = c.querySelector('.carousel-track');
-  const slides = c.querySelectorAll('.carousel-slide');
-  let idx = 0;
-  const show = (i) => { idx = (i + slides.length) % slides.length; track.style.transform = `translateX(-${idx * 100}%)`; };
-  c.querySelector('.carousel-prev').addEventListener('click', () => show(idx - 1));
-  c.querySelector('.carousel-next').addEventListener('click', () => show(idx + 1));
-  // Touch support
-  let startX;
-  track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-  track.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - startX; if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1)); });
-});
+  // Carousel logic
+  document.querySelectorAll('.carousel').forEach(c => {
+    const track = c.querySelector('.carousel-track');
+    const slides = c.querySelectorAll('.carousel-slide');
+    let idx = 0;
+    const show = (i) => { idx = (i + slides.length) % slides.length; track.style.transform = `translateX(-${idx * 100}%)`; };
+    c.querySelector('.carousel-prev').addEventListener('click', () => show(idx - 1));
+    c.querySelector('.carousel-next').addEventListener('click', () => show(idx + 1));
+    // Touch support
+    let startX;
+    track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    track.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - startX; if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1)); });
+  });
 
-// Easter egg: Konami code reveals mini-game
-const konami = [38,38,40,40,37,39,37,39,66,65];
-let kIdx = 0;
-document.addEventListener('keydown', e => {
-  if (e.keyCode === konami[kIdx]) { kIdx++; if (kIdx === konami.length) { document.getElementById('minigame').style.display = 'block'; document.getElementById('minigame').scrollIntoView({behavior:'smooth'}); kIdx = 0; } } else { kIdx = 0; }
-});
+  // Easter egg: Konami code reveals mini-game
+  const konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+  let kIdx = 0;
+  document.addEventListener('keydown', e => {
+    if (e.keyCode === konami[kIdx]) { kIdx++; if (kIdx === konami.length) { document.getElementById('minigame').style.display = 'block'; document.getElementById('minigame').scrollIntoView({ behavior: 'smooth' }); kIdx = 0; } } else { kIdx = 0; }
+  });
 
-// Mini text adventure
-const gameState = { room: 'cave', hasSword: false, hasTorch: false, dragonDead: false };
-const rooms = {
-  cave: {
-    desc: 'YOU ARE IN A DARK CAVE. THERE IS A PASSAGE TO THE NORTH.',
-    items: 'A RUSTY SWORD LIES ON THE GROUND.',
-    actions: {
-      'go north': () => { gameState.room = 'tunnel'; return rooms.tunnel.desc + '\n' + rooms.tunnel.items; },
-      'take sword': () => { if (gameState.hasSword) return 'YOU ALREADY HAVE THE SWORD.'; gameState.hasSword = true; return 'YOU PICK UP THE RUSTY SWORD. IT FEELS FAMILIAR... LIKE DEBUGGING OLD CODE.'; },
-      'look': () => rooms.cave.desc + '\n' + (gameState.hasSword ? 'THE GROUND IS EMPTY.' : rooms.cave.items),
-      'exmaine cave': () => 'DID YOU MEAN "EXAMINE"? LOOKS LIKE SOMEONE MISSPELLED A COMMAND... AGAIN. 😏',
-      'examine cave': () => 'THE WALLS ARE COVERED IN ANCIENT GLYPHS. THEY LOOK LIKE... JAVA STACK TRACES.',
+  // Mini text adventure
+  const gameState = { room: 'cave', hasSword: false, hasTorch: false, dragonDead: false };
+  const rooms = {
+    cave: {
+      desc: 'YOU ARE IN A DARK CAVE. THERE IS A PASSAGE TO THE NORTH.',
+      items: 'A RUSTY SWORD LIES ON THE GROUND.',
+      actions: {
+        'go north': () => { gameState.room = 'tunnel'; return rooms.tunnel.desc + '\n' + rooms.tunnel.items; },
+        'take sword': () => { if (gameState.hasSword) return 'YOU ALREADY HAVE THE SWORD.'; gameState.hasSword = true; return 'YOU PICK UP THE RUSTY SWORD. IT FEELS FAMILIAR... LIKE DEBUGGING OLD CODE.'; },
+        'look': () => rooms.cave.desc + '\n' + (gameState.hasSword ? 'THE GROUND IS EMPTY.' : rooms.cave.items),
+        'exmaine cave': () => 'DID YOU MEAN "EXAMINE"? LOOKS LIKE SOMEONE MISSPELLED A COMMAND... AGAIN. 😏',
+        'examine cave': () => 'THE WALLS ARE COVERED IN ANCIENT GLYPHS. THEY LOOK LIKE... JAVA STACK TRACES.',
+      }
+    },
+    tunnel: {
+      desc: 'YOU ARE IN A NARROW TUNNEL. TORCHES LINE THE WALLS. A DRAGON BLOCKS THE PATH NORTH.',
+      items: 'THERE IS AN UNLIT TORCH ON THE WALL.',
+      actions: {
+        'go south': () => { gameState.room = 'cave'; return rooms.cave.desc + '\n' + (gameState.hasSword ? 'THE GROUND IS EMPTY.' : rooms.cave.items); },
+        'go north': () => gameState.dragonDead ? (() => { gameState.room = 'treasure'; return rooms.treasure.desc; })() : 'THE DRAGON BLOCKS YOUR PATH! IT BREATHES FIRE THAT LOOKS SUSPICIOUSLY LIKE COMPILER ERRORS.',
+        'take torch': () => { if (gameState.hasTorch) return 'YOU ALREADY HAVE A TORCH.'; gameState.hasTorch = true; return 'YOU GRAB THE TORCH. IT LIGHTS UP AUTOMATICALLY. NICE UX.'; },
+        'fight dragon': () => { if (!gameState.hasSword) return 'WITH WHAT? YOUR BARE HANDS? THIS ISN\'T A HACKATHON.'; gameState.dragonDead = true; return '⚔️ YOU SWING THE RUSTY SWORD! THE DRAGON EXPLODES INTO A SHOWER OF DEPRECATED API WARNINGS.\nTHE PATH NORTH IS CLEAR!'; },
+        'look': () => rooms.tunnel.desc + '\n' + (gameState.hasTorch ? '' : rooms.tunnel.items) + (gameState.dragonDead ? '\nTHE DRAGON IS GONE. THE PATH NORTH IS CLEAR.' : ''),
+      }
+    },
+    treasure: {
+      desc: '🏆 YOU FOUND THE TREASURE ROOM!\n\nINSIDE IS A GOLDEN COMMODORE 64, STILL RUNNING AFTER ALL THESE YEARS.\nON THE SCREEN IT READS:\n\n  10 PRINT "TODD SHARP IS AWESOME"\n  20 GOTO 10\n\nCONGRATULATIONS! YOU BEAT THE GAME!\nYOU ARE A TRUE DEVELOPER. 🎮',
+      items: '',
+      actions: { 'look': () => rooms.treasure.desc }
     }
-  },
-  tunnel: {
-    desc: 'YOU ARE IN A NARROW TUNNEL. TORCHES LINE THE WALLS. A DRAGON BLOCKS THE PATH NORTH.',
-    items: 'THERE IS AN UNLIT TORCH ON THE WALL.',
-    actions: {
-      'go south': () => { gameState.room = 'cave'; return rooms.cave.desc + '\n' + (gameState.hasSword ? 'THE GROUND IS EMPTY.' : rooms.cave.items); },
-      'go north': () => gameState.dragonDead ? (() => { gameState.room = 'treasure'; return rooms.treasure.desc; })() : 'THE DRAGON BLOCKS YOUR PATH! IT BREATHES FIRE THAT LOOKS SUSPICIOUSLY LIKE COMPILER ERRORS.',
-      'take torch': () => { if (gameState.hasTorch) return 'YOU ALREADY HAVE A TORCH.'; gameState.hasTorch = true; return 'YOU GRAB THE TORCH. IT LIGHTS UP AUTOMATICALLY. NICE UX.'; },
-      'fight dragon': () => { if (!gameState.hasSword) return 'WITH WHAT? YOUR BARE HANDS? THIS ISN\'T A HACKATHON.'; gameState.dragonDead = true; return '⚔️ YOU SWING THE RUSTY SWORD! THE DRAGON EXPLODES INTO A SHOWER OF DEPRECATED API WARNINGS.\nTHE PATH NORTH IS CLEAR!'; },
-      'look': () => rooms.tunnel.desc + '\n' + (gameState.hasTorch ? '' : rooms.tunnel.items) + (gameState.dragonDead ? '\nTHE DRAGON IS GONE. THE PATH NORTH IS CLEAR.' : ''),
-    }
-  },
-  treasure: {
-    desc: '🏆 YOU FOUND THE TREASURE ROOM!\n\nINSIDE IS A GOLDEN COMMODORE 64, STILL RUNNING AFTER ALL THESE YEARS.\nON THE SCREEN IT READS:\n\n  10 PRINT "TODD SHARP IS AWESOME"\n  20 GOTO 10\n\nCONGRATULATIONS! YOU BEAT THE GAME!\nYOU ARE A TRUE DEVELOPER. 🎮',
-    items: '',
-    actions: { 'look': () => rooms.treasure.desc }
-  }
-};
+  };
 
-document.getElementById('game-input')?.addEventListener('keydown', e => {
-  if (e.key !== 'Enter') return;
-  const input = e.target.value.trim().toLowerCase();
-  e.target.value = '';
-  const output = document.getElementById('game-output');
-  const room = rooms[gameState.room];
-  let response;
-  if (input === 'help') { response = 'COMMANDS: LOOK, GO NORTH/SOUTH, TAKE [ITEM], FIGHT [ENEMY], EXAMINE [THING]'; }
-  else if (room.actions[input]) { response = room.actions[input](); }
-  else if (input.startsWith('go ')) { response = 'YOU CAN\'T GO THAT WAY. TRY LOOKING AROUND FIRST.'; }
-  else { response = 'I DON\'T UNDERSTAND "' + input.toUpperCase() + '". TYPE HELP FOR COMMANDS.'; }
-  output.querySelector('.terminal-output').innerHTML += '> ' + input.toUpperCase() + '<br><br>' + response.replace(/\n/g, '<br>') + '<br><br>';
-  output.scrollTop = output.scrollHeight;
-});
+  document.getElementById('game-input')?.addEventListener('keydown', e => {
+    if (e.key !== 'Enter') return;
+    const input = e.target.value.trim().toLowerCase();
+    e.target.value = '';
+    const output = document.getElementById('game-output');
+    const room = rooms[gameState.room];
+    let response;
+    if (input === 'help') { response = 'COMMANDS: LOOK, GO NORTH/SOUTH, TAKE [ITEM], FIGHT [ENEMY], EXAMINE [THING]'; }
+    else if (room.actions[input]) { response = room.actions[input](); }
+    else if (input.startsWith('go ')) { response = 'YOU CAN\'T GO THAT WAY. TRY LOOKING AROUND FIRST.'; }
+    else { response = 'I DON\'T UNDERSTAND "' + input.toUpperCase() + '". TYPE HELP FOR COMMANDS.'; }
+    output.querySelector('.terminal-output').innerHTML += '> ' + input.toUpperCase() + '<br><br>' + response.replace(/\n/g, '<br>') + '<br><br>';
+    output.scrollTop = output.scrollHeight;
+  });
 </script>
 {{ end }}
