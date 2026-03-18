@@ -65,11 +65,6 @@ theme = 'LoveIt'
   weight = 2
 
 [[menu.main]]
-  identifier = "devto"
-  name = "Featured Articles"
-  url = "/devto/"
-  weight = 3
-
 [[menu.main]]
   identifier = "videos"
   name = "Videos"

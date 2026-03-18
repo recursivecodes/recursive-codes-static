@@ -4,3 +4,37 @@
   height: auto;
   object-fit: unset;
 }
+
+.single .featured-image img {
+  object-position: var(--img-position, center);
+}
+
+.home .featured-image-preview img {
+  object-position: var(--img-position, center);
+}
+
+.home .featured-image-preview[data-contain="true"] {
+  overflow: hidden;
+}
+
+.home .featured-image-preview[data-contain="true"] img.blur-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  filter: blur(20px) brightness(0.9);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+.home .featured-image-preview[data-contain="true"] img:not(.blur-bg) {
+  object-fit: contain !important;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
