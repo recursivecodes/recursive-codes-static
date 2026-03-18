@@ -71,6 +71,12 @@ theme = 'LoveIt'
   url = "/videos/"
   weight = 4
 
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 5
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 

@@ -1,0 +1,399 @@
+{{ define "content" }}
+{{ $img := "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idatzojkinhi/b/img.recursive.codes/o" }}
+<div class="about-page">
+
+  <!-- ==================== TERMINAL SECTION ==================== -->
+  <section class="terminal-section">
+    <div class="terminal">
+      <div class="terminal-header">
+        <span class="terminal-dot red"></span>
+        <span class="terminal-dot yellow"></span>
+        <span class="terminal-dot green"></span>
+        <span class="terminal-title">todd@blairsville ~ %</span>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">whoami</span></div>
+        <div class="terminal-output">
+          <div class="whoami-flex">
+            <img src="{{ $img }}/signal-2026-03-08-17-46-29-556.jpeg" alt="Todd Sharp" class="terminal-avatar" />
+            <div>
+              <strong>Todd Sharp</strong><br>
+              Principal Developer Advocate @ AWS<br>
+              📍 Blairsville, GA — deep in the Blue Ridge Mountains<br>
+              ☕ 22 years of building things for the web
+            </div>
+          </div>
+        </div>
+
+        <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat tech_stack.txt</span></div>
+        <div class="terminal-output">
+          Java ☕ · JavaScript · TypeScript · Python 🐍 · C# · C/C++<br>
+          AWS (deep) · Oracle Cloud (deep) · GCP (light)<br>
+          Raspberry Pi · Arduino · Microcontrollers · Nixie Tubes · IoT everything
+        </div>
+
+        <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat hobbies.txt</span></div>
+        <div class="terminal-output">
+          🎮 Gaming since the Atari 2600 (current obsession: extraction shooters)<br>
+          🏠 Building miniature homes & book nooks (dozens built, backlog growing)<br>
+          🥾 Hiking the Blue Ridge foothills<br>
+          🔧 Soldering things that probably don't need to be soldered<br>
+          🐔 Chicken dad x7 · 🐕 Dog dad x2 · 🐈 Cat dad x1<br>
+          🐷 Former pig dad (RIP Milton the potbelly pig)
+        </div>
+
+        <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat origin_story.txt</span></div>
+        <div class="terminal-output">
+          First code: fixing a bug in a Commodore 64 text adventure game.<br>
+          The game's source had a misspelled command string.<br>
+          I found it. I fixed it. I was hooked. The rest is history.
+        </div>
+
+        <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">ls family/</span></div>
+        <div class="terminal-output">
+          👫 Married 24 years to my best friend<br>
+          👨‍👩‍👧‍👦 Two college-aged kids<br>
+          🐕 One mutt + one English cream long-haired miniature dachshund<br>
+          🐈 One cat who runs the house<br>
+          🐔 Seven chickens who think they run the yard
+        </div>
+
+        <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat blairsville.txt</span></div>
+        <div class="terminal-output">
+          Population: ~700. Elevation: 1,920 ft.<br>
+          Gateway to the Appalachian Trail. Home to Brasstown Bald (highest point in GA).<br>
+          Vogel State Park. Legendary fall foliage. Zero traffic.<br>
+          The kind of place where your neighbors wave and your chickens have names.
+        </div>
+
+        <div class="terminal-line"><span class="prompt">$</span> <span class="cmd blink">_</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== README SECTION ==================== -->
+  <section class="readme-section">
+    <h2><span class="readme-hash">#</span> README.md</h2>
+
+    <div class="badge-grid">
+      <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+      <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+      <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C#">
+      <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
+      <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS">
+      <img src="https://img.shields.io/badge/Oracle_Cloud-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="OCI">
+      <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
+      <img src="https://img.shields.io/badge/Raspberry_Pi-C51A4A?style=for-the-badge&logo=raspberrypi&logoColor=white" alt="Raspberry Pi">
+      <img src="https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white" alt="Unity">
+      <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+      <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+      <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes">
+    </div>
+
+    <h3>📖 Published Works</h3>
+    <div class="publications">
+      <a href="https://link.springer.com/book/10.1007/978-1-4842-8290-8" class="pub-card" target="_blank">
+        <strong>Introducing Micronaut</strong><br>
+        <span>Build, Test, and Deploy Java Microservices on Oracle Cloud</span><br>
+        <span class="pub-meta">Apress · 2022</span>
+      </a>
+      <a href="https://www.amazon.com/dp/B0892DJT72" class="pub-card" target="_blank">
+        <strong>Build, Test & Deploy a Micronaut Microservice</strong><br>
+        <span>...to the Oracle Cloud with GitHub Actions</span><br>
+        <span class="pub-meta">Self-Published · 2020</span>
+      </a>
+    </div>
+
+    <h3>🔗 Links</h3>
+    <div class="badge-grid">
+      <a href="https://github.com/recursivecodes"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+      <a href="https://linkedin.com/in/toddrsharp"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+      <a href="https://twitter.com/recursivecodes"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"></a>
+      <a href="https://twitch.tv/recursivecodes"><img src="https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white" alt="Twitch"></a>
+      <a href="https://instagram.com/toddrsharp"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
+    </div>
+  </section>
+
+  <!-- ==================== PHOTO CAROUSELS ==================== -->
+  <section class="photos-section">
+    <h2>📸 Life in Pictures</h2>
+
+    <h3>🎮 GDC 2026 — San Francisco</h3>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-1.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-2.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-3.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-4.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-5.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-6.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-7.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-8.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-9.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-10.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-11.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-12.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-13.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-14.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-15.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-16.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-17.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-18.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-19.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-20.jpg" alt="GDC 2026" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gdc-21.jpg" alt="GDC 2026" loading="lazy"></div>
+      </div>
+      <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
+      <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
+    </div>
+
+    <h3>🇯🇵 Japan JAWS Tour — February 2026</h3>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="{{ $img }}/about-japan-1.jpg" alt="Japan" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-japan-2.jpg" alt="Japan" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-japan-3.jpg" alt="Japan" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-japan-4.jpg" alt="Japan" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-japan-5.jpg" alt="Japan" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-japan-6.jpg" alt="Japan" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-japan-7.jpg" alt="Japan" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-japan-8.jpg" alt="Japan" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-japan-9.jpg" alt="Japan" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-japan-10.jpg" alt="Japan" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-japan-11.jpg" alt="Japan" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-japan-12.jpg" alt="Japan" loading="lazy"></div>
+      </div>
+      <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
+      <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
+    </div>
+
+    <h3>🎰 re:Invent 2025 — Las Vegas</h3>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-1.jpg" alt="re:Invent" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-2.jpg" alt="re:Invent" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-3.jpg" alt="re:Invent" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-4.jpg" alt="re:Invent" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-5.jpg" alt="re:Invent" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-6.jpg" alt="re:Invent" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-reinvent-7.jpg" alt="re:Invent" loading="lazy"></div>
+      </div>
+      <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
+      <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
+    </div>
+
+    <h3>🕹️ GLS Arcade</h3>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="{{ $img }}/about-gls-1.jpg" alt="GLS Arcade" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gls-2.jpg" alt="GLS Arcade" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gls-3.jpg" alt="GLS Arcade" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-gls-4.jpg" alt="GLS Arcade" loading="lazy"></div>
+      </div>
+      <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
+      <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
+    </div>
+
+    <h3>🏠 Book Nooks & Miniatures</h3>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-1.jpg" alt="Book Nook" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-2.jpg" alt="Book Nook" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-3.jpg" alt="Book Nook" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-4.jpg" alt="Book Nook" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-5.jpg" alt="Book Nook" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-6.jpg" alt="Book Nook" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-7.jpg" alt="Book Nook" loading="lazy"></div>
+        <div class="carousel-slide"><img src="{{ $img }}/about-booknook-8.jpg" alt="Book Nook" loading="lazy"></div>
+      </div>
+      <button class="carousel-btn carousel-prev" aria-label="Previous">❮</button>
+      <button class="carousel-btn carousel-next" aria-label="Next">❯</button>
+    </div>
+  </section>
+
+  <!-- ==================== TIMELINE SECTION ==================== -->
+  <section class="timeline-section">
+    <h2>⏳ The Journey</h2>
+    <div class="timeline">
+
+      <div class="timeline-item right">
+        <div class="timeline-badge">🎮</div>
+        <div class="timeline-content">
+          <h4>~1986</h4>
+          <p>Fixed a misspelled command in a Commodore 64 text adventure game. First bug fix. First line of code. Hooked for life.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="timeline-badge">💼</div>
+        <div class="timeline-content">
+          <h4>2011 — Booz Allen Hamilton</h4>
+          <p>Led dev teams on multimillion-dollar government contracts. Full-stack development for DoD and VA systems. Architected enterprise apps and managed database migrations. 7 years of building serious things for serious people.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="timeline-badge">☁️</div>
+        <div class="timeline-content">
+          <h4>2018 — Oracle</h4>
+          <p>Sr. Developer Advocate for Cloud & Cloud DB. Consistently top-producing author on Oracle Developers blog (100K+ yearly views). Go-to evangelist for new cloud product launches. ~12 conferences per year.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="timeline-badge">🎤</div>
+        <div class="timeline-content">
+          <h4>2019 — Oracle CloudWorld Keynote</h4>
+          <p>Delivered keynote presentation and appeared as featured guest in SVP keynote session at Oracle's flagship Code One conference.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="timeline-badge">📚</div>
+        <div class="timeline-content">
+          <h4>2020 — First Book</h4>
+          <p>Self-published <em>"Build, Test & Deploy a Micronaut Microservice to the Oracle Cloud with GitHub Actions"</em>.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="timeline-badge">📕</div>
+        <div class="timeline-content">
+          <h4>2022 — Apress Book + AWS</h4>
+          <p>Published <em>"Introducing Micronaut"</em> with Apress. Joined AWS/Twitch as Principal Developer Advocate. New chapter begins.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="timeline-badge">📺</div>
+        <div class="timeline-content">
+          <h4>2022-Present — AWS</h4>
+          <p>Blog posts averaging 50K+ annual views. Weekly live-stream show with 250K+ views (top 20% on AWS Twitch). Pioneered first open-source project integrating IVS with Amazon Nova voice agents. Built <a href="https://github.com/recursivecodes/ivs-cloud-cards">IVS Cloud Cards</a> — translated into Japanese!</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="timeline-badge">🎌</div>
+        <div class="timeline-content">
+          <h4>2024-2026 — Japan JAWS Tours</h4>
+          <p>Multiple trips across Japan presenting at JAWS user group events and festivals. Tokyo (2024, 2025, 2026), Hiroshima & Osaka (2024), Kanazawa (2025), Kyoto (2026). A recurring career highlight.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="timeline-badge">🏆</div>
+        <div class="timeline-content">
+          <h4>Mar 2026 — GDC San Francisco</h4>
+          <p>Selected for a featured demo at GDC 2026 showcasing GameLift Streams + Amazon IVS. Attended the Atari/Digital Eclipse mixer. Retro computing and gaming dream come true.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="timeline-badge">🚀</div>
+        <div class="timeline-content">
+          <h4>Now</h4>
+          <p>Still building. Still shipping. Still fixing bugs in text adventures (metaphorically). 246 blog posts and counting.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== EASTER EGG: MINI GAME ==================== -->
+  <section class="minigame-section" id="minigame" style="display:none;">
+    <div class="terminal minigame-terminal">
+      <div class="terminal-header">
+        <span class="terminal-dot red"></span>
+        <span class="terminal-dot yellow"></span>
+        <span class="terminal-dot green"></span>
+        <span class="terminal-title">C64 BASIC v2.0</span>
+      </div>
+      <div class="terminal-body" id="game-output">
+        <div class="terminal-output">
+          READY.<br><br>
+          YOU ARE IN A DARK CAVE. THERE IS A PASSAGE TO THE NORTH.<br>
+          A RUSTY SWORD LIES ON THE GROUND.<br>
+          WHAT DO YOU DO?<br><br>
+        </div>
+        <div class="game-input-line">
+          <span class="prompt">></span>
+          <input type="text" id="game-input" class="game-input" autocomplete="off" placeholder="type a command..." />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+// Carousel logic
+document.querySelectorAll('.carousel').forEach(c => {
+  const track = c.querySelector('.carousel-track');
+  const slides = c.querySelectorAll('.carousel-slide');
+  let idx = 0;
+  const show = (i) => { idx = (i + slides.length) % slides.length; track.style.transform = `translateX(-${idx * 100}%)`; };
+  c.querySelector('.carousel-prev').addEventListener('click', () => show(idx - 1));
+  c.querySelector('.carousel-next').addEventListener('click', () => show(idx + 1));
+  // Touch support
+  let startX;
+  track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  track.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - startX; if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1)); });
+});
+
+// Easter egg: Konami code reveals mini-game
+const konami = [38,38,40,40,37,39,37,39,66,65];
+let kIdx = 0;
+document.addEventListener('keydown', e => {
+  if (e.keyCode === konami[kIdx]) { kIdx++; if (kIdx === konami.length) { document.getElementById('minigame').style.display = 'block'; document.getElementById('minigame').scrollIntoView({behavior:'smooth'}); kIdx = 0; } } else { kIdx = 0; }
+});
+
+// Mini text adventure
+const gameState = { room: 'cave', hasSword: false, hasTorch: false, dragonDead: false };
+const rooms = {
+  cave: {
+    desc: 'YOU ARE IN A DARK CAVE. THERE IS A PASSAGE TO THE NORTH.',
+    items: 'A RUSTY SWORD LIES ON THE GROUND.',
+    actions: {
+      'go north': () => { gameState.room = 'tunnel'; return rooms.tunnel.desc + '\n' + rooms.tunnel.items; },
+      'take sword': () => { if (gameState.hasSword) return 'YOU ALREADY HAVE THE SWORD.'; gameState.hasSword = true; return 'YOU PICK UP THE RUSTY SWORD. IT FEELS FAMILIAR... LIKE DEBUGGING OLD CODE.'; },
+      'look': () => rooms.cave.desc + '\n' + (gameState.hasSword ? 'THE GROUND IS EMPTY.' : rooms.cave.items),
+      'exmaine cave': () => 'DID YOU MEAN "EXAMINE"? LOOKS LIKE SOMEONE MISSPELLED A COMMAND... AGAIN. 😏',
+      'examine cave': () => 'THE WALLS ARE COVERED IN ANCIENT GLYPHS. THEY LOOK LIKE... JAVA STACK TRACES.',
+    }
+  },
+  tunnel: {
+    desc: 'YOU ARE IN A NARROW TUNNEL. TORCHES LINE THE WALLS. A DRAGON BLOCKS THE PATH NORTH.',
+    items: 'THERE IS AN UNLIT TORCH ON THE WALL.',
+    actions: {
+      'go south': () => { gameState.room = 'cave'; return rooms.cave.desc + '\n' + (gameState.hasSword ? 'THE GROUND IS EMPTY.' : rooms.cave.items); },
+      'go north': () => gameState.dragonDead ? (() => { gameState.room = 'treasure'; return rooms.treasure.desc; })() : 'THE DRAGON BLOCKS YOUR PATH! IT BREATHES FIRE THAT LOOKS SUSPICIOUSLY LIKE COMPILER ERRORS.',
+      'take torch': () => { if (gameState.hasTorch) return 'YOU ALREADY HAVE A TORCH.'; gameState.hasTorch = true; return 'YOU GRAB THE TORCH. IT LIGHTS UP AUTOMATICALLY. NICE UX.'; },
+      'fight dragon': () => { if (!gameState.hasSword) return 'WITH WHAT? YOUR BARE HANDS? THIS ISN\'T A HACKATHON.'; gameState.dragonDead = true; return '⚔️ YOU SWING THE RUSTY SWORD! THE DRAGON EXPLODES INTO A SHOWER OF DEPRECATED API WARNINGS.\nTHE PATH NORTH IS CLEAR!'; },
+      'look': () => rooms.tunnel.desc + '\n' + (gameState.hasTorch ? '' : rooms.tunnel.items) + (gameState.dragonDead ? '\nTHE DRAGON IS GONE. THE PATH NORTH IS CLEAR.' : ''),
+    }
+  },
+  treasure: {
+    desc: '🏆 YOU FOUND THE TREASURE ROOM!\n\nINSIDE IS A GOLDEN COMMODORE 64, STILL RUNNING AFTER ALL THESE YEARS.\nON THE SCREEN IT READS:\n\n  10 PRINT "TODD SHARP IS AWESOME"\n  20 GOTO 10\n\nCONGRATULATIONS! YOU BEAT THE GAME!\nYOU ARE A TRUE DEVELOPER. 🎮',
+    items: '',
+    actions: { 'look': () => rooms.treasure.desc }
+  }
+};
+
+document.getElementById('game-input')?.addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return;
+  const input = e.target.value.trim().toLowerCase();
+  e.target.value = '';
+  const output = document.getElementById('game-output');
+  const room = rooms[gameState.room];
+  let response;
+  if (input === 'help') { response = 'COMMANDS: LOOK, GO NORTH/SOUTH, TAKE [ITEM], FIGHT [ENEMY], EXAMINE [THING]'; }
+  else if (room.actions[input]) { response = room.actions[input](); }
+  else if (input.startsWith('go ')) { response = 'YOU CAN\'T GO THAT WAY. TRY LOOKING AROUND FIRST.'; }
+  else { response = 'I DON\'T UNDERSTAND "' + input.toUpperCase() + '". TYPE HELP FOR COMMANDS.'; }
+  output.querySelector('.terminal-output').innerHTML += '> ' + input.toUpperCase() + '<br><br>' + response.replace(/\n/g, '<br>') + '<br><br>';
+  output.scrollTop = output.scrollHeight;
+});
+</script>
+{{ end }}
