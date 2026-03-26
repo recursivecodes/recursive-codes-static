@@ -65,7 +65,6 @@ theme = 'LoveIt'
   weight = 2
 
 [[menu.main]]
-[[menu.main]]
   identifier = "videos"
   name = "Videos"
   url = "/videos/"
@@ -77,8 +76,13 @@ theme = 'LoveIt'
   url = "/about/"
   weight = 5
 
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "SITEMAP"]
 
 [params.search]
   enable = true
