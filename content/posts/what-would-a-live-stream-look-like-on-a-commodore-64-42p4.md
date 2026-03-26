@@ -34,6 +34,7 @@ Here's an 8 pixel version:
 And a 16 pixel version:
 
 ![Heavy Pixels](https://objectstorage.us-ashburn-1.oraclecloud.com/n/idatzojkinhi/b/img.recursive.codes/o/devto-gteoh27admwlvk4tlwtm.png)
+
 </div>
 
 ## Second Iteration - Commodore 64 Style
@@ -44,14 +45,15 @@ The pixel effect was great, and it immediately made me think of the "old days" a
 
 ## Final Iteration - The Full C64 Webcam Simulator
 
-Feeling quite happy with the results, I decided to prompt Amazon Q to  update the UI to a full C64 experience. My prompt was rather vague as I decided to see what it could come up with. The final result was so much more than I could have expected. Amazon Q even decided to include a full terminal with a C64 style blinking cursor. You can try it out for yourself below. Choose a camera, click 'START CAMERA', and then type `RUN` at the C64 prompt!
+Feeling quite happy with the results, I decided to prompt Amazon Q to update the UI to a full C64 experience. My prompt was rather vague as I decided to see what it could come up with. The final result was so much more than I could have expected. Amazon Q even decided to include a full terminal with a C64 style blinking cursor. You can try it out for yourself below. Choose a camera, click 'START CAMERA', and then type `RUN` at the C64 prompt!
 
-> ⚠️ **Note**: CodePen can't get webcam permissions when running in embedded mode here on dev.to. Visit the pen in a new browser tab to[ try it out](https://codepen.io/Todd-Sharp/full/KwwoPNw)!
-
-{% codepen https://codepen.io/Todd-Sharp/pen/KwwoPNw %}
+<p class="codepen" data-height="600" data-default-tab="result" data-slug-hash="KwwoPNw" data-pen-title="C64 Webcam Simulator" data-user="Todd-Sharp">
+  <span>See the Pen <a href="https://codepen.io/Todd-Sharp/pen/KwwoPNw">C64 Webcam Simulator</a> by Todd Sharp on <a href="https://codepen.io/Todd-Sharp">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## Summary
 
-This was a fun experiment to see what I could create with the Amazon Q Developer CLI, and it helped me learn more about using the Insertable Streams API to modify a video track at the frame level. Sometimes learning new things can be fun just by vibing with an assistant to build a silly, throwaway app like this. 
+This was a fun experiment to see what I could create with the Amazon Q Developer CLI, and it helped me learn more about using the Insertable Streams API to modify a video track at the frame level. Sometimes learning new things can be fun just by vibing with an assistant to build a silly, throwaway app like this.
 
 Did this post inspire you to create something similar? Post your ideas and screenshots in the comments below!
