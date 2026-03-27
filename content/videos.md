@@ -19,14 +19,25 @@ layout: "single"
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
 }
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .featured-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .featured-video {
   position: relative;
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  border: 1px solid rgba(128,128,128,0.25);
 }
 .featured-video .video-wrapper {
   position: relative;
@@ -50,14 +61,14 @@ layout: "single"
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 0.25rem 0.75rem;
-  border-radius: 4px;
+  border-radius: 4px 4px 0 0;
   margin-bottom: 0;
 }
 .playlist-embed {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
@@ -139,12 +150,19 @@ layout: "single"
 
 <div class="video-section">
   <h2>Featured</h2>
-  <p class="section-desc">Building a real-time interactive streaming experience with Amazon IVS.</p>
   <!-- hi -->
-  <div class="featured-video">
-    <span class="featured-badge">★ Featured</span>
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube-nocookie.com/embed/4Fa_B3LxEVM?rel=0" title="Featured Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <div class="featured-grid">
+    <div class="featured-video">
+      <span class="featured-badge">★ Featured</span>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/BQEHt5GcAJA?rel=0" title="Featured Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+    <div class="featured-video">
+      <span class="featured-badge">★ Featured</span>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/4Fa_B3LxEVM?rel=0" title="Featured Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
     </div>
   </div>
 </div>
