@@ -2,7 +2,7 @@
 title: "Swapping Participant Tokens in Real-Time with Amazon IVS"
 slug: "swapping-participant-tokens-in-real-time-with-amazon-ivs"
 author: "Todd Sharp"
-date: 2026-04-23T12:32:08Z
+date: 2026-04-16T12:32:08Z
 summary: "Learn how to use the new stage.exchangeToken() API in Amazon IVS Web Broadcast SDK 1.33.0 to swap participant tokens in real-time. Promote viewers to publishers, feature participants, and update capabilities on the fly without disconnecting from the stage."
 tags: ["aws", "amazonivs"]
 featuredimage: "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idatzojkinhi/b/img.recursive.codes/o/clipboard-20260323-123701.png"
