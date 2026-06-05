@@ -6,7 +6,7 @@ date: 2026-04-13T00:00:00Z
 summary: "Learn how to integrate ElevenLabs voice AI with Amazon IVS to add real-time transcription, content moderation, meeting transcription, and virtual assistants to your live streams."
 tags: ["elevenlabs", "amazonivs", "voice-ai"]
 featuredimage: "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idatzojkinhi/b/img.recursive.codes/o/clipboard-20260413-095527.png"
-_build:
+build:
   list: never
   render: always
 ---
