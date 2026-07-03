@@ -73,7 +73,7 @@ You scurry towards the back of the restaurant, almost slipping on a bit of greas
   <img src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/idatzojkinhi/b/img.recursive.codes/o/clipboard-20260703-110121.png" alt="out of burgers!" />
 </div>
 
-"Dude, they're behind the fries!" he barks back.
+"Dude, they're behind the chips!" he barks back.
 
 Shoving the cases of 'chips' out of the way, you see nothing but more fries. You also wonder why a German themed fast-food chain uses the British slang for french fries, but that thought quickly turns to panic.
 
