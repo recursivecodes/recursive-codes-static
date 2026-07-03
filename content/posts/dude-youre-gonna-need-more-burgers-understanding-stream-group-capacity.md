@@ -41,7 +41,7 @@ He always seems so proud of the wisdom he imparts. You've also noticed that ther
 
 "Between 10 and 11:45 we make orders on-demand," Greg chirps.
 
-Did he just roll his eyes as he finished that last sentence? There's no time to dwell on Greg's idiosyncrasies as the lunch rush will be starting soon and dozens of hungry customers will be queued in the lobby wanting a fresh, cheesy WünderBürger and fries.
+Did he just roll his eyes as he finished that last sentence? There's no time to dwell on Greg's idiosyncrasies as the lunch rush will be starting soon and dozens of hungry customers will be queued in the lobby wanting a fresh, cheesy WünderBürger and chips.
 
 Like a seasoned pro, Greg flips the freezer next to the grill open and grabs a stack of six frozen patties in each hand. He slaps them on the griddle with speed and accuracy, lowers the clamshell and spins to slide the buns into the toaster. You watch in amazement as he masterfully dresses and wraps this batch, getting them into the window with almost uncanny timing right as the lobby doors open and a small crew of construction workers walks in to the restaurant.
 
