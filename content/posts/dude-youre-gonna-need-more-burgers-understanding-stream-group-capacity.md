@@ -3,7 +3,7 @@ title: "Dude, You're Gonna Need More Burgers: Understanding Stream Group Capacit
 slug: "dude-youre-gonna-need-more-burgers-understanding-stream-group-capacity"
 author: "Todd Sharp"
 date: 2026-07-02T18:18:14Z
-summary: "In this"
+summary: "Before you can understand minimum, target idle, and maximum capacity for Amazon GameLift Streams, you need to understand the lunch rush at BürgerWürld."
 tags: ["gameliftstreams", "aws"]
 keywords: "gameliftstreams, aws"
 featuredimage: https://objectstorage.us-ashburn-1.oraclecloud.com/n/idatzojkinhi/b/img.recursive.codes/o/clipboard-20260703-101151.png
